@@ -1,7 +1,7 @@
 {
   "$schema": "https://apps.bridgething.com/schemas/catalog/v1.json",
   "schema": "catalog.v1",
-  "updated_at": "2026-10-20T20:26:17.452Z",
+  "updated_at": "2026-10-20T20:32:27.637Z",
   "repo": {
     "name": "pomo-thing",
     "description": "Pomo: un pomodoro con personaje para el Car Thing.",
@@ -14,10 +14,41 @@
       "name": "Pomo",
       "description": "Pomodoro con un personaje que te acompaña y avisos con sonido en tu Mac.",
       "author": "gmejiae",
-      "icon": null,
+      "icon": "https://gmejiae.github.io/pomo-thing/icons/01a15aa6-5fe9-7168-bc1a-b7e0db100bca.svg",
+      "screenshots": [
+        "https://gmejiae.github.io/pomo-thing/screenshots/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/01-timer.png",
+        "https://gmejiae.github.io/pomo-thing/screenshots/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/02-focus.png",
+        "https://gmejiae.github.io/pomo-thing/screenshots/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/03-tickle.png",
+        "https://gmejiae.github.io/pomo-thing/screenshots/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/04-progress.png",
+        "https://gmejiae.github.io/pomo-thing/screenshots/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/05-celebrate.png",
+        "https://gmejiae.github.io/pomo-thing/screenshots/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/06-tour.png"
+      ],
       "homepage": "https://github.com/gmejiae/pomo-thing",
       "source": "https://github.com/gmejiae/pomo-thing",
       "versions": [
+        {
+          "version": "0.5.2",
+          "released_at": "2026-10-20T20:32:27.632Z",
+          "download": {
+            "url": "https://gmejiae.github.io/pomo-thing/r/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/0.5.2.zip",
+            "size": 548276,
+            "sha256": "9f98f22877b3256a46b71b977aa5b67754220f64523333af1dd291750d24ea8c"
+          },
+          "settings": {
+            "url": "https://gmejiae.github.io/pomo-thing/s/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/0.5.2.html",
+            "size": 27750,
+            "sha256": "203c914809005990728fbd9404bf5d99c101386c6659d7792f63112ba26a4e0b"
+          },
+          "permissions": [],
+          "extension": {
+            "desktop": true,
+            "permissions": [
+              "run:osascript"
+            ]
+          },
+          "min_libbridgething_version": "0.12.1",
+          "changelog": "ícono para la tienda y capturas de pantalla"
+        },
         {
           "version": "0.5.1",
           "released_at": "2026-10-20T20:26:17.448Z",
