@@ -1,0 +1,48 @@
+{
+  "$schema": "https://apps.bridgething.com/schemas/catalog/v1.json",
+  "schema": "catalog.v1",
+  "updated_at": "2026-10-20T20:26:17.452Z",
+  "repo": {
+    "name": "pomo-thing",
+    "description": "Pomo: un pomodoro con personaje para el Car Thing.",
+    "homepage": "https://github.com/gmejiae/pomo-thing",
+    "icon": null
+  },
+  "apps": [
+    {
+      "id": "01a15aa6-5fe9-7168-bc1a-b7e0db100bca",
+      "name": "Pomo",
+      "description": "Pomodoro con un personaje que te acompaña y avisos con sonido en tu Mac.",
+      "author": "gmejiae",
+      "icon": null,
+      "homepage": "https://github.com/gmejiae/pomo-thing",
+      "source": "https://github.com/gmejiae/pomo-thing",
+      "versions": [
+        {
+          "version": "0.5.1",
+          "released_at": "2026-10-20T20:26:17.448Z",
+          "download": {
+            "url": "https://gmejiae.github.io/pomo-thing/r/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/0.5.1.zip",
+            "size": 547516,
+            "sha256": "730a442e69b4a1d5048a5e023e98d5e9b9e4a9dccad1d9c961e79c8816dbe63e"
+          },
+          "settings": {
+            "url": "https://gmejiae.github.io/pomo-thing/s/01a15aa6-5fe9-7168-bc1a-b7e0db100bca/0.5.1.html",
+            "size": 27750,
+            "sha256": "203c914809005990728fbd9404bf5d99c101386c6659d7792f63112ba26a4e0b"
+          },
+          "permissions": [],
+          "extension": {
+            "desktop": true,
+            "permissions": [
+              "run:osascript"
+            ]
+          },
+          "min_libbridgething_version": "0.12.1",
+          "changelog": "etiquetas de ajustes en español e inglés"
+        }
+      ]
+    }
+  ],
+  "recommended_sources": []
+}
