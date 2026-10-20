@@ -1,0 +1,8 @@
+{
+  "name": "pomo-thing",
+  "description": "Pomo: un pomodoro con personaje para el Car Thing.",
+  "homepage": "https://github.com/gmejiae/pomo-thing",
+  "icon": null,
+  "base_url": "https://gmejiae.github.io/pomo-thing",
+  "recommended_sources": []
+}

@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: block;
+  src: url("./fonts/Rubik-Variable.ttf") format("truetype-variations");
+}
+
+@theme {
+  --color-ink: #ffffff;
+  --color-bg: #12131d;
+  --color-lilac: #8b7cf8;
+  --color-lilac-light: #c9c1ff;
+  --color-orange: #ff8a3d;
+  --color-sky: #8fd8f0;
+  --color-ok: #7ee2a8;
+  --color-warn: #ff9a8a;
+
+  --color-soft: color-mix(in srgb, var(--color-ink) 72%, transparent);
+  --color-dim: color-mix(in srgb, var(--color-ink) 50%, transparent);
+
+  --font-sans: "Rubik", system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body {
+    @apply font-sans text-ink antialiased;
+    width: 800px;
+    height: 480px;
+    margin: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background:
+      radial-gradient(420px 320px at 22% 55%, rgb(255 138 61 / 0.18), transparent 70%),
+      radial-gradient(520px 360px at 95% -10%, rgb(139 124 248 / 0.35), transparent 70%),
+      linear-gradient(160deg, #23243a 0%, #15161f 55%, #0e0f16 100%);
+  }
+}
+
+/* shortcut: glass is faked with gradients and highlights instead of backdrop-filter, which is costly on the car
+   thing's gpu; switch to backdrop-filter if it holds 60fps on device */
+@layer components {
+  .glass {
+    background: linear-gradient(150deg, rgb(255 255 255 / 0.16), rgb(255 255 255 / 0.05) 60%, rgb(255 255 255 / 0.08));
+    border: 1.5px solid rgb(255 255 255 / 0.16);
+    box-shadow:
+      inset 0 1.5px 0 rgb(255 255 255 / 0.28),
+      inset 0 -10px 24px rgb(255 255 255 / 0.03),
+      0 10px 28px rgb(0 0 0 / 0.35);
+  }
+  .glass-lilac {
+    background: linear-gradient(150deg, rgb(139 124 248 / 0.45), rgb(139 124 248 / 0.18));
+    border: 1.5px solid rgb(201 193 255 / 0.55);
+    box-shadow:
+      inset 0 1.5px 0 rgb(255 255 255 / 0.35),
+      0 10px 28px rgb(139 124 248 / 0.3);
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, #a395ff, #7a68f2);
+    box-shadow:
+      inset 0 2px 0 rgb(255 255 255 / 0.35),
+      inset 0 -3px 0 rgb(0 0 0 / 0.12),
+      0 12px 30px rgb(122 104 242 / 0.5);
+  }
+  .press {
+    transition: transform 0.12s;
+  }
+  .press:active {
+    transform: scale(0.96);
+  }
+  .mascot * {
+    transform-box: fill-box;
+  }
+  .mascot-body {
+    transform-origin: 50% 100%;
+    animation: breathe 3.2s ease-in-out infinite;
+  }
+  .mascot-focus .mascot-body {
+    animation-duration: 2.2s;
+  }
+  .mascot-done .mascot-body {
+    animation: hop 0.7s ease-in-out infinite;
+  }
+  .mascot-eyes {
+    transform-origin: center;
+    animation: blink 4.5s infinite;
+  }
+  .mascot-leaves {
+    transform-origin: 50% 100%;
+    animation: sway 3s ease-in-out infinite;
+  }
+  .mascot-sparkles {
+    animation: twinkle 0.9s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes breathe {
+  50% { transform: scale(1.04, 0.97); }
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0) scale(1.03, 0.96); }
+  50% { transform: translateY(-18px) scale(0.97, 1.04); }
+}
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+@keyframes sway {
+  50% { transform: rotate(-8deg); }
+}
+@keyframes twinkle {
+  to { opacity: 0.3; }
+}
+
+@keyframes bloom {
+  from { transform: scale(0); }
+}
+.mascot-flower {
+  transform-origin: 50% 100%;
+  animation: bloom 0.8s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.bubble {
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  animation: pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+@keyframes pop {
+  from { transform: translateX(-50%) scale(0.5); opacity: 0; }
+}
+
+.mascot-look {
+  transition: transform 0.3s;
+}
+.mascot.mascot-act-jump .mascot-body { animation: jump 0.7s cubic-bezier(0.3, 0.7, 0.4, 1); }
+.mascot.mascot-act-hop .mascot-body { animation: hop 0.7s ease-in-out 2; }
+.mascot.mascot-act-wiggle .mascot-body { animation: wiggle 0.7s ease-in-out 2; }
+.mascot.mascot-act-squish .mascot-body { animation: squish 0.7s ease-in-out 2; }
+.mascot.mascot-act-spin .mascot-body { animation: spin 1.2s ease-in-out; }
+.mascot.mascot-act-laugh .mascot-body { animation: giggle 0.18s linear 10; }
+.mascot.mascot-act-peek .mascot-look { animation: peek 1.4s ease-in-out; }
+.mascot.mascot-act-jump .mascot-shadow,
+.mascot.mascot-act-hop .mascot-shadow { animation: shadow 0.7s ease-in-out 2; transform-origin: center; }
+
+@keyframes jump {
+  0% { transform: scale(1.1, 0.88); }
+  40% { transform: translateY(-34px) scale(0.94, 1.08); }
+  75% { transform: translateY(0) scale(1.08, 0.92); }
+  100% { transform: none; }
+}
+@keyframes wiggle {
+  25% { transform: rotate(-9deg); }
+  75% { transform: rotate(9deg); }
+}
+@keyframes squish {
+  50% { transform: scale(1.16, 0.84); }
+}
+@keyframes spin {
+  50% { transform: scaleX(-1); }
+}
+@keyframes giggle {
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(4deg) translateY(-6px); }
+}
+@keyframes peek {
+  25%, 40% { transform: translateX(-7px); }
+  60%, 75% { transform: translateX(7px); }
+}
+@keyframes shadow {
+  50% { transform: scale(0.75); opacity: 0.15; }
+}
+
+.tour-step {
+  animation: slide-in 0.35s ease-out;
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(24px); }
+}

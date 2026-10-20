@@ -1,0 +1,115 @@
+{
+  "id": "01a15aa6-5fe9-7168-bc1a-b7e0db100bca",
+  "name": "Pomo",
+  "version": "0.5.1",
+  "description": "Pomodoro con un personaje que te acompaña y avisos con sonido en tu Mac.",
+  "settings": "settings.html",
+  "config": [
+    {
+      "type": "enum",
+      "data": {
+        "key": "lang",
+        "label": "Idioma / Language",
+        "choices": [
+          "Español",
+          "English"
+        ],
+        "default": "Español"
+      }
+    },
+    {
+      "type": "number",
+      "data": {
+        "key": "focus",
+        "label": "Enfoque preset 1 / Preset 1 focus (min)",
+        "min": 1,
+        "max": 120,
+        "step": 1,
+        "default": 25
+      }
+    },
+    {
+      "type": "number",
+      "data": {
+        "key": "short",
+        "label": "Descanso corto preset 1 / Preset 1 short break (min)",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "default": 5
+      }
+    },
+    {
+      "type": "number",
+      "data": {
+        "key": "long",
+        "label": "Descanso largo / Long break (min)",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "default": 15
+      }
+    },
+    {
+      "type": "number",
+      "data": {
+        "key": "every",
+        "label": "Descanso largo cada N / Long break every N",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "default": 4
+      }
+    },
+    {
+      "type": "number",
+      "data": {
+        "key": "goal",
+        "label": "Meta diaria / Daily goal",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "default": 8
+      }
+    },
+    {
+      "type": "boolean",
+      "data": {
+        "key": "mac_alerts",
+        "label": "Avisos en la Mac / Mac alerts",
+        "default": true
+      }
+    },
+    {
+      "type": "enum",
+      "data": {
+        "key": "sound",
+        "label": "Sonido del aviso / Alert sound",
+        "choices": [
+          "Glass",
+          "Ping",
+          "Hero",
+          "Purr",
+          "Submarine",
+          "Funk",
+          "Pop",
+          "Tink",
+          "Ninguno / None"
+        ],
+        "default": "Glass"
+      }
+    }
+  ],
+  "permissions": [],
+  "art": {
+    "heroPx": 248,
+    "thumbPx": 96
+  },
+  "extension": {
+    "entry": "extension/desktop.mjs",
+    "permissions": [
+      "run:osascript"
+    ],
+    "api": 1
+  }
+}
