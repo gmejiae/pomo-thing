@@ -1,5 +1,9 @@
 # pomo
 
+## 0.5.2
+
+ícono para la tienda y capturas de pantalla
+
 ## 0.5.1
 
 etiquetas de ajustes en español e inglés

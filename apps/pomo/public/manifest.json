@@ -1,8 +1,9 @@
 {
   "id": "01a15aa6-5fe9-7168-bc1a-b7e0db100bca",
   "name": "Pomo",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Pomodoro con un personaje que te acompaña y avisos con sonido en tu Mac.",
+  "icon": "icon.svg",
   "settings": "settings.html",
   "config": [
     {

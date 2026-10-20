@@ -1,6 +1,19 @@
-# pomo-thing
+<p align="center">
+  <img src="apps/pomo/public/icon.svg" width="128" height="128" alt="Pomo icon">
+</p>
 
-**Pomo**: a Pomodoro timer with a little companion, Mochi, for the Spotify Car Thing running [bridgething](https://bridgething.com).
+<h1 align="center">pomo-thing</h1>
+
+<p align="center"><strong>Pomo</strong>: a Pomodoro timer with a little companion, Mochi, for the Spotify Car Thing running <a href="https://bridgething.com">bridgething</a>.</p>
+
+<p align="center">
+  <img src="apps/pomo/screenshots/01-timer.png" width="400" alt="Pick a block">
+  <img src="apps/pomo/screenshots/02-focus.png" width="400" alt="Focus running">
+  <img src="apps/pomo/screenshots/03-tickle.png" width="400" alt="Tickling Mochi">
+  <img src="apps/pomo/screenshots/04-progress.png" width="400" alt="Daily progress and streak">
+  <img src="apps/pomo/screenshots/05-celebrate.png" width="400" alt="Block finished">
+  <img src="apps/pomo/screenshots/06-tour.png" width="400" alt="Welcome tour">
+</p>
 
 - Suggests focus and break blocks, with presets (25/5, 50/10, 15/3) and the knob to adjust minutes.
 - Mochi chats, fidgets, jumps when tapped and laughs when tickled. Its sprout grows with every pomodoro and blooms at your daily goal.
